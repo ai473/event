@@ -162,6 +162,16 @@
   .vp-grid-1 .vp-slot{max-width:560px}
   .vp-grid-1 .vp-slot::before{padding-top:75%} /* landscape for cinema */
 
+  /* ── ACTIVITIES ── */
+  .activities-block{margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  .activity-item{background:var(--bg3);padding:2rem 2.2rem;display:flex;flex-direction:column;gap:1rem;transition:background .25s}
+  .activity-item:hover{background:var(--bg2)}
+  .activity-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+  .activity-item p{font-family:var(--serif);font-size:1.1rem;font-weight:300;line-height:1.55;color:var(--cream)}
+  @media(max-width:768px){
+    .activities-block{grid-template-columns:1fr}
+  }
+
   /* ── SPOTIFY ── */
   .spotify-btn{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--sans);font-size:.55rem;font-weight:200;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;border:1px solid var(--gold);padding:.65rem 1.4rem;margin-top:1.8rem;transition:background .25s,color .25s}
   .spotify-btn:hover{background:var(--gold);color:#f0ebe0}
@@ -463,16 +473,26 @@
         </div>
       </div>
 
-      <div class="artist-item">
-        <div class="artist-left">
-          <span class="artist-num">06</span>
-          <span class="artist-type">Камерний виступ · до 45 хв + обговорення</span>
-          <span class="artist-name">Кажанна</span>
-          <p class="artist-bio"></p>
-        </div>
-        <a href="https://instagram.com/kazhanna_" target="_blank" class="artist-link">@kazhanna_ →</a>
-      </div>
+    </div>
+  </div>
 
+  <!-- ACTIVITIES BLOCK -->
+  <div class="activities-block r">
+    <div class="activity-item">
+      <span class="activity-dot"></span>
+      <p>Лекція від медіа NOIRE про візуальну культуру, сучасну музику та мультидисциплінарність артистів</p>
+    </div>
+    <div class="activity-item">
+      <span class="activity-dot"></span>
+      <p>Звучить! — відкритий формат подкасту</p>
+    </div>
+    <div class="activity-item">
+      <span class="activity-dot"></span>
+      <p>Публічна дискусія за коктейлями від команди лейблу та партнерів</p>
+    </div>
+    <div class="activity-item">
+      <span class="activity-dot"></span>
+      <p>Показ фільму спільно з Kyiv Music Film про музику яка стає протестом</p>
     </div>
   </div>
 </section>
